@@ -603,6 +603,9 @@ ar71xx_board_detect() {
 	*"DW33D")
 		name="dw33d"
 		;;
+	*"DomyWifi DW33D WIFI")
+		name="dw33d-wifi"
+		;;
 	*E2100L)
 		name="e2100l"
 		;;
@@ -1243,6 +1246,15 @@ ar71xx_board_detect() {
 		;;
 	*"HiWiFi HC6361")
 		name="hiwifi-hc6361"
+		;;
+	*"Lunatic-BOX")
+		name="lunaticbox"
+		;;
+	*"Hualu Wifi Dock")
+		name="hualu-wifi-dock"
+		;;
+	*"Pisen Cloud Router")
+		name="tl-wr841n-v8-cn"
 		;;
 	esac
 

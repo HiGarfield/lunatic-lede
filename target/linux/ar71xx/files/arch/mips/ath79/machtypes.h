@@ -296,6 +296,10 @@ enum ath79_mach_type {
 	ATH79_MACH_ZCN_1523H_2,			/* Zcomax ZCN-1523H-2-xx */
 	ATH79_MACH_ZCN_1523H_5,			/* Zcomax ZCN-1523H-5-xx */
 	ATH79_MACH_CSAC,			/* CSAC board */
+	ATH79_MACH_LUNATICBOX,		/* LUNATICBOX support */
+	ATH79_Hualu_Wifi_Dock,			/* Hualu-Wifi-Dock */
+	ATH79_MACH_DW33D_WIFI,		/* DomyWifi DW33D WIFI support */
+	ATH79_MACH_TL_WR841N_V8_CN,	/* TP-LINK TL-WR841N/ND v8 CN */
 };
 
 #endif /* _ATH79_MACHTYPE_H */

@@ -160,6 +160,7 @@ get_status_led() {
 	oolite)
 		status_led="$board:red:system"
 		;;
+	dw33d-wifi|\
 	dw33d)
 		status_led="$board:blue:status"
 		;;
@@ -367,6 +368,7 @@ get_status_led() {
 	tl-wr841n-v1|\
 	tl-wr841n-v7|\
 	tl-wr841n-v8|\
+	tl-wr841n-v8-cn|\
 	tl-wr841n-v11|\
 	tl-wa830re-v2|\
 	tl-wr842n-v2|\
@@ -462,6 +464,12 @@ get_status_led() {
 	csac)
 		status_led="csac:green:status"
 		;;
+	lunaticbox)
+		status_led="lunaticbox:green:lan"
+		;;
+	hualu-wifi-dock)
+		status_led="hualu-wifi-dock:blue:system"
+		;;
 	esac
 }
 
@@ -487,6 +495,9 @@ set_state() {
 		qihoo-c301)
 			local n=$(fw_printenv activeregion | cut -d = -f 2)
 			fw_setenv "image${n}trynum" 0
+			;;
+		lunaticbox)
+			fw_printenv lc >/dev/null 2>&1 && fw_setenv "bootcount" 0
 			;;
 		esac
 		;;

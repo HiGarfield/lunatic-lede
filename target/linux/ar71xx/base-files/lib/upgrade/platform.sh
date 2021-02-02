@@ -218,6 +218,7 @@ platform_check_image() {
 	bullet-m|\
 	c-55|\
 	carambola2|\
+	lunaticbox|\
 	cf-e316n-v2|\
 	cf-e320n-v2|\
 	cf-e380ac-v1|\
@@ -312,6 +313,7 @@ platform_check_image() {
 	bxu2000n-2-a1|\
 	db120|\
 	dr344|\
+	dw33d-wifi|\
 	dw33d|\
 	f9k1115v2|\
 	hornet-ub|\
@@ -432,12 +434,14 @@ platform_check_image() {
 	tl-wr841n-v1|\
 	tl-wr841n-v7|\
 	tl-wr841n-v8|\
+	tl-wr841n-v8-cn|\
 	tl-wr841n-v9|\
 	tl-wr842n-v2|\
 	tl-wr842n-v3|\
 	tl-wr941nd-v5|\
 	tl-wr941nd-v6|\
 	tl-wr940n-v4|\
+	hualu-wifi-dock|\
 	tl-wr941nd)
 		local magic_ver="0100"
 

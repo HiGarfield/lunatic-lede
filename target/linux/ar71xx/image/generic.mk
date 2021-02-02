@@ -20,6 +20,37 @@ define Device/ap90q
 endef
 TARGET_DEVICES += ap90q
 
+define Device/lunaticbox
+  DEVICE_TITLE := Lunatic-BOX wifi for things
+  BOARDNAME = Lunatic-BOX
+  IMAGE_SIZE = 16000k
+  CONSOLE = ttyS0,115200
+  MTDPARTS = spi0.0:256k(u-boot)ro,64k(u-boot-env),16000k(firmware),64k(art)ro
+endef
+TARGET_DEVICES += lunaticbox
+
+define Device/hualu-wifi-dock
+  $(Device/tplink-8mlzma)
+  DEVICE_TITLE := Hualu Wifi Dock
+  DEVICE_PACKAGES := kmod-usb-core kmod-usb2
+  BOARDNAME := Hualu
+  DEVICE_PROFILE := HUALU
+  TPLINK_HWID := 0x07030101
+  CONSOLE := ttyATH0,115200
+endef
+TARGET_DEVICES += hualu-wifi-dock
+
+define Device/dw33d-wifi
+  DEVICE_TITLE := DomyWifi DW33D WIFI
+  DEVICE_PACKAGES := kmod-usb-core kmod-usb2 kmod-usb-storage kmod-usb-ledtrig-usbport kmod-ath10k ath10k-firmware-qca988x
+  BOARDNAME = DW33D-WIFI
+  IMAGE_SIZE = 16000k
+  CONSOLE = ttyS0,115200
+  MTDPARTS = spi0.0:256k(u-boot)ro,64k(u-boot-env)ro,14528k(rootfs),1472k(kernel),64k(art)ro,16000k@0x50000(firmware)
+  IMAGE/sysupgrade.bin = append-rootfs | pad-rootfs | pad-to 14528k | append-kernel | check-size $$$$(IMAGE_SIZE)
+endef
+TARGET_DEVICES += dw33d-wifi
+
 define Device/bsb
   DEVICE_TITLE := Smart Electronics Black Swift board
   DEVICE_PACKAGES := kmod-usb-core kmod-usb2
